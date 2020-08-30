@@ -99,6 +99,7 @@ html{
     top: 0;
     left: 0;
     max-width: 320px;
+    z-index: 2;
 }
 .hamburger__wrapper{
     padding: 18px 16px 32px 16px;
@@ -153,6 +154,7 @@ html{
 }
 .hamburger-footer__feedback-menu{
     flex-basis: 100%;
+    display: flex;
 }
 .hamburger-footer__email{
     flex-basis: 100%;
@@ -312,3 +314,116 @@ html{
     margin-top: 64px;
     margin-left: auto;
 }
+.price-table{
+    display: flex;
+    overflow: hidden;
+}
+ .price-table__body{
+    display: flex;
+}
+.price-table__row:first-child{
+    display: none;
+}
+.price-table__row{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1 0 260px;
+    padding: 16px 0 20px 16px;
+    position: relative;
+    margin-right: 16px;
+}
+.price::before{
+    content: "Цена";
+    display: block;
+}
+.price-table__service::before{
+    content: "Ремонтные услуги";
+    display: block;
+    margin-bottom: 6px;
+    color: #7E7E82;
+    font-size: 14px;
+}
+.price-table__price::before{
+    content: "Цена";
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 16px;
+    color: #7E7E82;
+    font-size: 14px;
+}
+.price-table__time::before{
+    content: "Срок";
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 16px;
+    color: #7E7E82;
+    font-size: 14px;
+}
+.order-button{
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    background: url(../assets/next-button-white.svg) no-repeat 100px center #FF3E79;
+    position: absolute;
+    right: 16px;
+    bottom: 24px;
+}
+.price-table__button{
+    padding: 10px 42px 10px 16px;
+}
+.slider-section__content{
+    overflow: hidden;
+}
+.slider-section__footer{
+    margin-top: 16px;
+}
+.price-table__pagination{
+    display: block;
+}
+.price-table__pagination{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+.price-table__body{
+    padding-bottom: 50px;
+}
+.swiper-pagination-bullet{
+    margin: 0 4px;
+}
+.slider-section__footer{
+    margin-top: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.slider-section__footer-text{
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+.get-commercial{
+    font-weight: 600;
+    background: url(../assets/commercial-button.svg) no-repeat center right;
+}
+.slider-section__commercial{
+    padding-right: 10px;
+    margin-bottom: 40px;
+}
+.footer__wrapper{
+    margin-top: 40px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #7E7E82;
+    text-align: center;
+}
+.footer__column:not(:last-child){
+    margin-bottom: 16px;
+}
+

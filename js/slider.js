@@ -1,5 +1,6 @@
 const sliderBrand = document.querySelector('.slider-brand')
 const sliderTechnical = document.querySelector('.slider-technical')
+const sliderPrice = document.querySelector('.price-table')
 let mySwiper;
 
 
@@ -20,8 +21,8 @@ function mobileSliderBrand() {
 	}
 
 	if (window.innerWidth > 767) {
-		slider.dataset.mobile = 'false';
-		if (slider.classList.contains('swiper-container-initialized')) {
+		sliderBrand.dataset.mobile = 'false';
+		if (sliderBrand.classList.contains('swiper-container-initialized')) {
 			mySwiper.destroy();
 		}
 	}
@@ -44,8 +45,32 @@ function mobileSliderTechnical() {
 	}
 
 	if (window.innerWidth > 767) {
-		slider.dataset.mobile = 'false';
-		if (slider.classList.contains('swiper-container-initialized')) {
+		sliderTechnical.dataset.mobile = 'true';
+		if (sliderTechnical.classList.contains('swiper-container-initialized')) {
+			mySwiper.destroy();
+		}
+	}
+}
+
+function mobileSliderPrice() {
+	if (window.innerWidth <= 767 && sliderPrice.dataset.mobile == 'false') {
+		mySwiper = new Swiper(sliderPrice, {
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			loop: false,
+			slideClass: 'price-table__row',
+			pagination: {
+			 	el: '.swiper-pagination',
+			 	clickable: true,
+			 },
+		});
+
+		sliderPrice.dataset.mobile = 'true';
+	}
+
+	if (window.innerWidth > 767) {
+		sliderPrice.dataset.mobile = 'false';
+		if (sliderPrice.classList.contains('swiper-container-initialized')) {
 			mySwiper.destroy();
 		}
 	}
@@ -54,7 +79,9 @@ function mobileSliderTechnical() {
 
 mobileSliderBrand()
 mobileSliderTechnical()
+mobileSliderPrice()
 window.addEventListener('resize', () => {
     mobileSliderBrand();
     mobileSliderTechnical();
+    mobileSliderPrice()
 });
