@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>Block 1.6</title>
 </head>
+
 <body>
     <div class="container">
         <header class="header">
@@ -54,7 +56,7 @@
                 </header>
                 <ul class="hamburger__list">
                     <li class="hamburger__list-item">
-                        <a class="hamburger__list-link hamburger__list-link--active" href="#">Ремонт техники</a>
+                        <a class="hamburger__list-link" href="#">Ремонт техники</a>
                     </li>
                     <li class="hamburger__list-item">
                         <a class="hamburger__list-link" href="#">Услуги и сервисы</a>
@@ -79,8 +81,8 @@
                     </li>
                 </ul>
                 </nav>
-                <footer class="hamburger-footer hamburger__footer">
-                    <ul class="feedback-menu hamburger-footer__feedback-menu">
+                <footer class="hamburger__footer">
+                    <ul class="feedback-menu hamburger__feedback-menu">
                         <li class="feedback-menu__item">
                             <button class="ui-button ui-button--phone"></button>
                         </li>
@@ -93,7 +95,7 @@
                     </ul>
                     <ul class="contact-list">
                         <li class="contact-list__item">
-                            <a class="contact-list__email" href="mailto:mail@cps.com" >mail@cps.com</a>
+                            <a class="contact-list__email" href="mailto:mail@cps.com">mail@cps.com</a>
                         </li>
                         <li class="contact-list__item">
                             <a class="contact-list__phone" href="tel:+88008908900">8 800 890 8900</a>
@@ -112,6 +114,27 @@
                     </ul>
                 </footer>
             </div>
+        </aside>
+        <aside class="feedback">
+            <button class="feedback__close ui-button ui-button--close"></button>
+            <form class="feedback-form feedback__form" action="#" id="feedback-form">
+                <p class="feedback-form__title">Обратная связь</p>
+                <input class="feedback-form__input" type="text" name="name" placeholder="Имя">
+                <input class="feedback-form__input" type="tel" name="tel" placeholder="Телефон">
+                <input class="feedback-form__input" type="email" name="email" placeholder="Электронная почта">
+                <textarea class="feedback-form__textarea" name="message" id="message" rows="5" placeholder="Сообщение"></textarea>
+                <p class="feedback-form__text">Нажимая “отправить”, вы даете согласие на <a class="feedback-form__link" href="">обработку персональных данных</a> и соглашаетесь с нашей <a class="feedback-form__link" href="#">политикой конфиденциальности</a></p>
+                <button class="feedback-form__submit" form="feedback-form">Отправить</button>
+            </form>
+        </aside>
+        <aside class="callback">
+            <button class="callback__close ui-button ui-button--close"></button>
+            <form class="callback-form callback__form" action="#" id="callback-form">
+                <p class="callback-form__title">Заказать звонок</p>
+                <input class="callback-form__input" type="tel" name="tel" placeholder="Телефон">
+                <p class="callback-form__text">Нажимая “отправить”, вы даете согласие на <a class="callback-form__link" href="">обработку персональных данных</a> и соглашаетесь с нашей <a class="callback-form__link" href="#">политикой конфиденциальности</a></p>
+                <button class="callback-form__submit" form="callback-form">Отправить</button>
+            </form>
         </aside>
         <main class="main">
             <div class="main__wrapper">
@@ -164,66 +187,66 @@
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
                             <img class="brand-list__image" src="img/brand-lenovo.png" alt="Lenovo">
-                            
+
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
                             <img class="brand-list__image" src="img/brand-samsung.png" alt="Samsung">
-                            
+
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
                             <img class="brand-list__image" src="img/brand-apple.png" alt="Apple">
-                            
+
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
                             <img class="brand-list__image" src="img/brand-viewsonic.png" alt="Viewsonic">
-                            
+
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
                             <img class="brand-list__image" src="img/brand-bosch.png" alt="Bosch">
-                            
+
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
                             <img class="brand-list__image" src="img/brand-hp.png" alt="Hp">
-                            
+
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
                             <img class="brand-list__image" src="img/brand-acer.png" alt="Acer">
-                            
+
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
                             <img class="brand-list__image" src="img/brand-sony.png" alt="Sony">
-                            
+
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
                             <img class="brand-list__image" src="img/brand-samsung.png" alt="Samsung">
-                            
+
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
                             <img class="brand-list__image" src="img/brand-samsung.png" alt="Samsung">
-                            
+
                         </a>
                     </li>
                 </ul>
                 <button class="show-more slider-brand__show-more">Показать всё</button>
-                <div class="swiper-pagination"></div>
+                <div class="pagination"></div>
             </div>
         </section>
         <section class="section">
@@ -259,7 +282,7 @@
                     </li>
                 </ul>
                 <button class="show-more slider-technical__show-more">Показать всё</button>
-                <div class="swiper-pagination"></div>
+                <div class="pagination"></div>
             </div>
         </section>
         <section class="section">
@@ -269,57 +292,62 @@
             <div class="slider-price section__content">
                 <table class="price-table" data-mobile="false">
                     <tbody class="swiper-wrapper price-table__body">
-                            <tr class="price-table__row">
-                                <th class="price-table__head">Ремонтные услуги</th>
-                                <th class="price-table__head">Цена</th>
-                                <th class="price-table__head">Срок</th>
-                            </tr>
-                            <tr class="price-table__row">
-                                <td class="price-table__cell price-table__service">Диагностика</td>
-                                <td class="price-table__cell price-table__price">Бесплатно</td>
-                                <td class="price-table__cell price-table__time">30 мин</td>
-                                <td class="price-table__cell"><button class="order-button price-table__button">Заказать</button></td>
-                            </tr>
-                            <tr class="price-table__row">
-                                <td class="price-table__cell price-table__service">Замена дисплея</td>
-                                <td class="price-table__cell price-table__price">1 000 ₽</td>
-                                <td class="price-table__cell price-table__time">30-120 мин</td>
-                                <td class="price-table__cell"><button class="order-button price-table__button">Заказать</button></td>
-                            </tr>
-                            <tr class="price-table__row">
-                                <td class="price-table__cell price-table__service">Замена полифонического динамика</td>
-                                <td class="price-table__cell price-table__price">1 000 ₽</td>
-                                <td class="price-table__cell price-table__time">30-120 мин</td>
-                                <td class="price-table__cell"><button class="order-button price-table__button">Заказать</button></td>
-                            </tr>
-                            <tr class="price-table__row">
-                                <td class="price-table__cell price-table__service">Тестирование с выдачей технического заключения</td>
-                                <td class="price-table__cell price-table__price">1 000 ₽</td>
-                                <td class="price-table__cell price-table__time">30-120 мин</td>
-                                <td class="price-table__cell"><button class="order-button price-table__button">Заказать</button></td>
-                            </tr>
-                            <tr class="price-table__row">
-                                <td class="price-table__cell price-table__service">Замена программного обеспечения</td>
-                                <td class="price-table__cell price-table__price">1 000 ₽</td>
-                                <td class="price-table__cell price-table__time">30-120 мин</td>
-                                <td class="price-table__cell"><button class="order-button price-table__button">Заказать</button></td>
-                            </tr>
-                            <tr class="swiper-pagination price-table__pagination"></tr>
+                        <tr class="price-table__row">
+                            <th class="price-table__head">Ремонтные услуги</th>
+                            <th class="price-table__head">Цена</th>
+                            <th class="price-table__head">Срок</th>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__cell price-table__service">Диагностика</td>
+                            <td class="price-table__cell price-table__price">Бесплатно</td>
+                            <td class="price-table__cell price-table__time">30 мин</td>
+                            <td class="price-table__cell"><button
+                                    class="order-button price-table__button">Заказать</button></td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__cell price-table__service">Замена дисплея</td>
+                            <td class="price-table__cell price-table__price">1 000 ₽</td>
+                            <td class="price-table__cell price-table__time">30-120 мин</td>
+                            <td class="price-table__cell"><button
+                                    class="order-button price-table__button">Заказать</button></td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__cell price-table__service">Замена полифонического динамика</td>
+                            <td class="price-table__cell price-table__price">1 000 ₽</td>
+                            <td class="price-table__cell price-table__time">30-120 мин</td>
+                            <td class="price-table__cell"><button
+                                    class="order-button price-table__button">Заказать</button></td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__cell price-table__service">Тестирование с выдачей технического
+                                заключения</td>
+                            <td class="price-table__cell price-table__price">1 000 ₽</td>
+                            <td class="price-table__cell price-table__time">30-120 мин</td>
+                            <td class="price-table__cell"><button
+                                    class="order-button price-table__button">Заказать</button></td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__cell price-table__service">Замена программного обеспечения</td>
+                            <td class="price-table__cell price-table__price">1 000 ₽</td>
+                            <td class="price-table__cell price-table__time">30-120 мин</td>
+                            <td class="price-table__cell"><button
+                                    class="order-button price-table__button">Заказать</button></td>
+                        </tr>
+                        <tr class="pagination price-table__pagination"></tr>
                     </tbody>
                 </table>
             </div>
             <div class="section__footer">
-                <p class="section__footer-text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+                <p class="section__footer-text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
+                    услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
                 <a class="section__commercial" href="#">Получить коммерческое предложение</a>
             </div>
         </section>
         <footer class="footer">
             <ul class="footer__info">
                 <li class="footer__info-item">
-                    <address class="footer__address">
                         © 2019 CPS
-                        <a class="footer__info-link" href="#">Разработано командой Apesong </a>  
-                    </address>
+                        <a class="footer__info-link" href="#">Разработано командой Apesong</a>
                 </li>
                 <li class="footer__info-item">
                     <a class="footer__info-link" href="#">Политика конфиденциальности</a>
@@ -329,6 +357,8 @@
                 </li>
             </ul>
         </footer>
+        <div class="overlay"></div>
     </div>
 </body>
+
 </html>
