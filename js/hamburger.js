@@ -1,5 +1,0 @@
-let hamburger = document.querySelector('.hamburger')
-let hamburgerClose = document.querySelector('.ui-button--hamburger-close')
-let hamburgerOpen = document.querySelector('.ui-button--hamburger-open')
-hamburgerOpen.addEventListener('click', () => hamburger.style.display = 'block')
-hamburgerClose.addEventListener('click', () => hamburger.style.display = 'none')

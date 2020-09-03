@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Block_1.6</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/media.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
-
 <body>
-
     <div class="container">
         <header class="header">
             <div class="header__wrapper">
                 <button class="ui-button ui-button--hamburger-open"></button>
                 <div class="logo header__logo">
-                    <img class="logo__image" src="assets/logo.svg" alt="CPS">
+                    <img class="logo__image" src="img/logo.svg" alt="CPS">
                 </div>
                 <ul class="feedback-menu header__feedback-menu">
                     <li class="feedback-menu__item">
@@ -54,7 +48,7 @@
                 <header class="hamburger__header">
                     <button class="ui-button ui-button--hamburger-close"></button>
                     <div class="logo hamburger__logo">
-                        <img class="logo__image" src="assets/logo.svg" alt="CPS">
+                        <img class="logo__image" src="img/logo.svg" alt="CPS">
                     </div>
                     <button class="ui-button ui-button--search"></button>
                 </header>
@@ -97,8 +91,14 @@
                             <button class="ui-button ui-button--user"></button>
                         </li>
                     </ul>
-                    <a class="hamburger-footer__email" href="mailto:mail@cps.com" >mail@cps.com</a>
-                    <a class="hamburger-footer__phone" href="tel:+88008908900">8 800 890 8900</a>
+                    <ul class="contact-list">
+                        <li class="contact-list__item">
+                            <a class="contact-list__email" href="mailto:mail@cps.com" >mail@cps.com</a>
+                        </li>
+                        <li class="contact-list__item">
+                            <a class="contact-list__phone" href="tel:+88008908900">8 800 890 8900</a>
+                        </li>
+                    </ul>
                     <ul class="language-list">
                         <li class="language-list__item language-list__item--active">
                             <button class="language-list__btn">RU</button>
@@ -150,75 +150,75 @@
                         <button class="read-more article__more">Читать далее</button>
                     </div>
                     <div class="article__image-content">
-                        <img class="article__image" src="assets/content-image.jpg" alt="CPS">
+                        <img class="article__image" src="img/content-image.jpg" alt="CPS">
                     </div>
                 </article>
             </div>
         </main>
-        <section class="slider-section">
-            <div class="slider-section__header">
-                <h2 class="slider-section__title">Ремонт техники различных брендов</h2>
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Ремонт техники различных брендов</h2>
             </div>
-            <div class="slider-brand slider-section__content" data-mobile="false">
+            <div class="slider-brand section__content" data-mobile="false">
                 <ul class="swiper-wrapper brand-list">
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
-                            <img class="brand-list__image" src="assets/brand-lenovo.png" alt="">
-                            <span class="ui-button ui-button--transparent"></span>
+                            <img class="brand-list__image" src="img/brand-lenovo.png" alt="Lenovo">
+                            
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
-                            <img class="brand-list__image" src="assets/brand-samsung.png" alt="">
-                            <span class="ui-button ui-button--transparent"></span>
+                            <img class="brand-list__image" src="img/brand-samsung.png" alt="Samsung">
+                            
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
-                            <img class="brand-list__image" src="assets/brand-apple.png" alt="">
-                            <span class="ui-button ui-button--transparent"></span>
+                            <img class="brand-list__image" src="img/brand-apple.png" alt="Apple">
+                            
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
-                            <img class="brand-list__image" src="assets/brand-viewsonic.png" alt="">
-                            <span class="ui-button ui-button--transparent"></span>
+                            <img class="brand-list__image" src="img/brand-viewsonic.png" alt="Viewsonic">
+                            
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
-                            <img class="brand-list__image" src="assets/brand-bosch.png" alt="">
-                            <span class="ui-button ui-button--transparent"></span>
+                            <img class="brand-list__image" src="img/brand-bosch.png" alt="Bosch">
+                            
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
-                            <img class="brand-list__image" src="assets/brand-hp.png" alt="">
-                            <span class="ui-button ui-button--transparent"></span>
+                            <img class="brand-list__image" src="img/brand-hp.png" alt="Hp">
+                            
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
-                            <img class="brand-list__image" src="assets/brand-acer.png" alt="">
-                            <span class="ui-button ui-button--transparent"></span>
+                            <img class="brand-list__image" src="img/brand-acer.png" alt="Acer">
+                            
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
-                            <img class="brand-list__image" src="assets/brand-sony.png" alt="">
-                            <span class="ui-button ui-button--transparent"></span>
+                            <img class="brand-list__image" src="img/brand-sony.png" alt="Sony">
+                            
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
-                            <img class="brand-list__image" src="assets/brand-samsung.png" alt="">
-                            <span class="ui-button ui-button--transparent"></span>
+                            <img class="brand-list__image" src="img/brand-samsung.png" alt="Samsung">
+                            
                         </a>
                     </li>
                     <li class="brand-list__item">
                         <a class="brand-list__link" href="#">
-                            <img class="brand-list__image" src="assets/brand-samsung.png" alt="">
-                            <span class="ui-button ui-button--transparent"></span>
+                            <img class="brand-list__image" src="img/brand-samsung.png" alt="Samsung">
+                            
                         </a>
                     </li>
                 </ul>
@@ -226,40 +226,35 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        <section class="slider-section">
-            <div class="slider-section__header">
-                <h2 class="slider-section__title">Ремонт различных видов техники</h2>
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Ремонт различных видов техники</h2>
             </div>
-            <div class="slider-technical slider-section__content" data-mobile="false">
+            <div class="slider-technical section__content" data-mobile="false">
                 <ul class="swiper-wrapper technical-list">
                     <li class="technical-list__item">
                         <a class="technical-list__link" href="">
-                            <h4 class="technical-list__title">Ремонт ноутбуков</h4>
-                            <button class="ui-button ui-button--transparent technical-list__button"></button>
+                            <p class="technical-list__title">Ремонт ноутбуков</p>
                         </a>
                     </li>
                     <li class="technical-list__item">
                         <a class="technical-list__link" href="">
-                            <h4 class="technical-list__title">Ремонт планшетов</h4>
-                            <button class="ui-button ui-button--transparent technical-list__button"></button>
+                            <p class="technical-list__title">Ремонт планшетов</p>
                         </a>
                     </li>
                     <li class="technical-list__item">
                         <a class="technical-list__link" href="">
-                            <h4 class="technical-list__title">Ремонт ПК</h4>
-                            <button class="ui-button ui-button--transparent technical-list__button"></button>
+                            <p class="technical-list__title">Ремонт ПК</p>
                         </a>
                     </li>
                     <li class="technical-list__item">
                         <a class="technical-list__link" href="">
-                            <h4 class="technical-list__title">Ремонт мониторов</h4>
-                            <button class="ui-button ui-button--transparent technical-list__button"></button>
+                            <p class="technical-list__title">Ремонт мониторов</p>
                         </a>
                     </li>
                     <li class="technical-list__item">
                         <a class="technical-list__link" href="">
-                            <h4 class="technical-list__title">Ремонт телефонов</h4>
-                            <button class="ui-button ui-button--transparent technical-list__button"></button>
+                            <p class="technical-list__title">Ремонт телефонов</p>
                         </a>
                     </li>
                 </ul>
@@ -267,11 +262,11 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        <section class="slider-section">
-            <div class="slider-section__header">
-                <h2 class="slider-section__title">цены на услуги</h2>
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">цены на услуги</h2>
             </div>
-            <div class="slider-price slider-section__content">
+            <div class="slider-price section__content">
                 <table class="price-table" data-mobile="false">
                     <tbody class="swiper-wrapper price-table__body">
                             <tr class="price-table__row">
@@ -293,7 +288,7 @@
                             </tr>
                             <tr class="price-table__row">
                                 <td class="price-table__cell price-table__service">Замена полифонического динамика</td>
-                                <td class="price-table__cell ">1 000 ₽</td>
+                                <td class="price-table__cell price-table__price">1 000 ₽</td>
                                 <td class="price-table__cell price-table__time">30-120 мин</td>
                                 <td class="price-table__cell"><button class="order-button price-table__button">Заказать</button></td>
                             </tr>
@@ -313,33 +308,27 @@
                     </tbody>
                 </table>
             </div>
-            <div class="slider-section__footer">
-                <p class="slider-section__footer-text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-                <a class="get-commercial slider-section__commercial" href="#">Получить коммерческое предложение</a>
+            <div class="section__footer">
+                <p class="section__footer-text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+                <a class="section__commercial" href="#">Получить коммерческое предложение</a>
             </div>
         </section>
         <footer class="footer">
-            <div class="footer__wrapper">
-                <div class="footer__column">
+            <ul class="footer__info">
+                <li class="footer__info-item">
                     <address class="footer__address">
-                        © 2019 CPS<br>
-                        Разработано командой Apesong    
+                        © 2019 CPS
+                        <a class="footer__info-link" href="#">Разработано командой Apesong </a>  
                     </address>
-                </div>
-                <div class="footer__column">
-                    <a class="footer__privacy" href="#">Политика конфиденциальности</a>
-                </div>
-                <div class="footer__column">
-                    <p class="copyright">Информация, размещенная на данной странице, не является публичной офертой</p>
-                </div>
-            </div>
+                </li>
+                <li class="footer__info-item">
+                    <a class="footer__info-link" href="#">Политика конфиденциальности</a>
+                </li>
+                <li class="footer__info-item">
+                    Информация, размещенная на данной странице, не является публичной офертой
+                </li>
+            </ul>
         </footer>
     </div>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/hamburger.js"></script>
-    <script src="js/show-more.js"></script>
 </body>
-
 </html>

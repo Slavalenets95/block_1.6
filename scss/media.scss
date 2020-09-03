@@ -1,0 +1,300 @@
+@media only screen and (min-width : 768px) {
+    .header__wrapper{
+        padding: 18px 24px;
+    }
+    .header__logo::before{
+        content: "";
+        display: inline-block;
+        height: 32px;
+        border: 1px solid #EAEAEA;
+        margin-right: 20px;
+        margin-left: 4px;
+        vertical-align: middle;
+    }
+    .feedback-menu{
+        display: flex;
+    }
+    .repair-menu::before{
+        content: "";
+        display: inline-block;
+        height: 32px;
+        border: 1px solid #EAEAEA;
+        margin-right: 20px;
+        margin-left: 20px;
+        vertical-align: middle;
+    }
+    .title::before{
+        left: -24px;
+    }
+    .hamburger__footer{
+        margin-top: 240px;
+    }
+    .main__wrapper{
+        padding: 32px 24px 12px 24px;
+    }
+    .article{
+        display: flex;
+    }
+    .article__text-content{
+        margin-top: 32px;
+        margin-right: 48px;
+        flex: 1 1 310px;
+    }
+    .article__text-wrapper{
+        max-height: 160px;
+    }
+    .article__text:not(:first-child){
+        margin-top: 32px;
+    }
+    .article__image-content{
+        flex: 1 1 360px;
+        margin-top: 32px;
+    }
+    .swiper-pagination{
+        display: none;
+    }
+    .section__header{
+        margin-top: 32px;
+    }
+    .section__title{
+        padding: 16px 24px;
+    }
+    .section__content{
+        margin-top: 8px;
+        margin-right: -24px;
+    }
+    .brand-list{
+        flex-wrap: wrap;
+        max-height: 196px;
+        overflow: hidden;
+    }
+    .brand-list__item{
+        margin-right: 24px;
+        margin-top: 16px;
+        min-width: 224px;
+        flex: 0 0 29%;
+        max-width: 338px;
+    }
+    .show-more{
+        display: inline-block;
+        font-weight: 600;
+        background: url(../img/more-icon.svg) no-repeat 16px center;
+    }
+    .slider-brand__show-more{
+        margin-top: 24px;
+        padding-left: 56px;
+    }
+
+    .technical-list{
+        flex-wrap: wrap;
+        max-height: 186px;
+        overflow: hidden;
+    }
+    .technical-list__item{
+        margin-right: 24px;
+        margin-top: 16px;
+        min-width: 224px;
+        flex: 0 0 29%;
+        max-width: 338px;
+    }
+    .slider-technical__show-more{
+        margin-top: 24px;
+        padding-left: 56px;
+    }
+    .price-table{
+        display: flex;
+        font-size: 14px;
+    }
+    .price-table__body{
+        flex-direction: column;
+    }
+    .price-table__row:first-child{
+        display: flex;
+    }
+    .price-table__row{
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        align-items: center;
+        flex: 0 1 auto;
+        border: none;
+    }
+    .price-table__row:not(:first-child){
+        border-top: 1px solid #EAEAEA;
+    }
+    .order-button{
+        position: static;
+    }
+
+    .price-table__service::before{
+        display: none;
+    }
+    .price-table__price::before{
+        display: none;
+    }
+    .price-table__time::before{
+        display: none;
+    }
+    .price-table__head{
+        flex: 0 1 20%;
+        text-align: left;
+        padding: 20px;
+        color: #7E7E82;
+    }
+    .price-table__head:first-child{
+        flex: 0 0 40%;
+    }
+    .price-table__cell{
+        flex: 0 1 20%;
+        text-align: left;
+        padding: 20px;
+    }
+    .price-table__cell:first-child{
+        flex: 0 0 40%;
+    }
+    .footer__info{
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+        padding: 0 24px 0 24px;
+        margin-top: 80px;
+    }
+    .footer__info-item{
+        flex-basis: 33%;
+        margin-bottom: 0;
+    }
+    .section__footer{
+        padding: 0 24px 0 24px;
+    }
+    .section__footer-text{
+        max-width: 420px;
+    }
+}
+
+
+
+@media only screen and (min-width : 1120px){
+    .header{
+        background-color: transparent;
+    }
+    .header__wrapper{
+        padding: 18px 32px;
+    }
+    .title::before{
+        left: -32px;
+    }
+    .main__wrapper{
+        padding: 32px 32px 12px 32px;
+    }
+    .main__nav{
+        margin-top: -15px;
+    }
+    .nav__list{
+        flex-wrap: wrap;
+    }
+    .nav__list-item{
+        margin-top: 15px;
+    }
+    .article__text-content{
+        margin-top: 20px;
+        margin-right: 36px;
+        flex: 1 1 490px;
+    }
+    .article__image-content{
+        margin-top: 20px;
+        flex: 1 1 530px;
+    }
+    .section__title{
+        padding: 16px 32px;
+    }
+    .section__content{
+        padding: 0 32px;
+        margin-right: -32px;
+    }
+    .section__footer{
+        padding: 0 32px 0 32px;
+    }
+    .brand-list__item{
+        margin-right: 32px;
+        flex: 0 0 22%;
+    }
+    .technical-list__item{
+        flex: 0 0 22%;
+        margin-right: 32px;
+    }
+    .article__more{
+        padding-left: 56px;
+    }
+    .price-table__body-cell:first-child{
+        flex: 0 1 40%;
+    }
+    .price-table__head-header:first-child{
+        flex: 0 1 40%;
+    }
+    .price-table__head-header{
+        flex: 0 1 20%;
+    }
+    .footer__info{
+        padding: 0 32px 0 32px;
+    }
+}
+
+@media only screen and (min-width : 1440px){
+    body{
+        max-width: 1440px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .container{
+        margin-left: 320px;
+    }
+    .hamburger__wrapper{
+        padding: 32px 32px 0 20px;
+    }
+    .hamburger{
+        display: block;
+    }
+    .ui-button--hamburger-open, .header__logo, .header__feedback-menu{
+        display: none;
+    }
+    .header__wrapper{
+        padding: 42px 32px 0 32px;
+    }
+    .header__repair-menu{
+        margin-left: auto;
+    }
+    .repair-menu::before{
+        display: none;
+    }
+    .header__title{
+        margin-top: 0;
+        flex-basis: auto;
+        order: -1;
+    }
+    .repair-menu__link{
+        display: flex;
+        align-items: center;
+    }
+    .repair-menu__btn-description{
+        display: inline-block;
+        padding-right: 8px;
+    }
+    .main__wrapper{
+        padding-top: 8px;
+    }
+    .hamburger__footer{
+        margin-top: 240px;
+    }
+    .section__footer{
+        padding: 0 32px 0 32px;
+    }
+    .ui-button--hamburger-close{
+        display: none;
+    }
+    .hamburger__logo{
+        margin-left: 0;
+    }
+}
+.max-height-none{
+    max-height: none;
+}
