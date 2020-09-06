@@ -1,0 +1,87 @@
+.section{
+    &__header{
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    &__title{
+        color: $secondary-text-color;
+        text-transform: uppercase;
+        line-height: 1.5;
+        padding: 16px;
+        background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%)
+    }
+    &__content{
+        margin-top: 16px;
+        padding: 0 16px;
+        overflow: hidden;       
+    }
+    &__footer{
+        margin-top: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    &__footer-text{
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 16px;
+    }
+    &__commercial{
+        padding-right: 12px;
+        font-weight: 600;
+        background: url(../img/icons/commercial-button.svg) no-repeat center right;
+    }
+}
+
+.show-more{
+    display: none;
+}
+
+@media only screen and (min-width : 768px){
+    .section{
+        &__header{
+            margin-top: 32px;
+        }
+        &__title{
+            padding: 16px 24px;
+        }
+        &__content{
+            margin-top: 8px;
+            margin-right: -24px;
+        }
+        &__footer{
+            padding: 0 24px 0 24px;
+        }
+        &__footer-text{
+            max-width: 420px;
+        }
+    }
+
+    .show-more{
+        display: inline-block;
+        font-weight: 600;
+        background: url(../img/icons/more-icon.svg) no-repeat 16px center;
+    }
+}
+
+@media only screen and (min-width : 1120px){
+    .section{
+        &__title{
+            padding: 16px 32px;
+        }
+        &__content{
+            padding: 0 32px;
+            margin-right: -32px;
+        }
+        &__footer{
+            padding: 0 32px 0 32px;
+        }
+    }
+}
+
+@media only screen and (min-width : 1440px){
+    .section{
+        &__footer{
+            padding: 0 32px 0 32px;
+        }
+    }
+}

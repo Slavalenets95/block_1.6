@@ -1,20 +1,52 @@
-let hamburger = document.querySelector('.hamburger')
-let hamburgerClose = document.querySelector('.ui-button--hamburger-close')
-let hamburgerOpen = document.querySelector('.ui-button--hamburger-open')
-let overlay = document.querySelector('.overlay')
-hamburgerOpen.addEventListener('click', () => {
-    hamburger.style.display = 'block'
-    overlay.classList.toggle('overlay--active')
-})
+const hamburger = document.querySelector('.hamburger')
+const hamburgerClose = document.querySelector('.ui-button--hamburger-close')
+const hamburgerOpen = document.querySelector('.ui-button--hamburger-open')
+const overlayArea = document.querySelector('.overlay')
 
-hamburgerClose.addEventListener('click', () => {
-    hamburger.style.display = 'none'
-    overlay.classList.toggle('overlay--active')
-})
 
-overlay.addEventListener('click', () => {
-    if(innerWidth >= 768 && innerWidth <= 1366) {
-        hamburger.style.display = 'none'
-        overlay.classList.toggle('overlay--active')
+
+function openHamburger() {
+    hamburger.classList.add('hamburger--active')
+}
+
+function closeHamburger() {
+    hamburger.classList.remove('hamburger--active')
+}
+
+function overlay() {
+    overlayArea.classList.toggle('overlay--active')
+}
+
+function hamburgerOpenButtonClickHandler() {
+    openHamburger()
+    overlay()
+}
+
+function hamburgerCloseButtonClickHandler() {
+    closeHamburger()
+    overlay()
+}
+
+function overlayAreaClickHandler() {
+    if(hamburger.classList.contains('hamburger--active')) {
+        closeHamburger()
+        overlay()
     }
-})
+}
+
+function hamburgerCloseEscHandler(event) {
+    if(event.keyCode === 27 && hamburger.classList.contains('hamburger--active')) {
+        closeHamburger()
+        overlay()
+    }
+}
+
+
+hamburgerOpen.addEventListener('click', hamburgerOpenButtonClickHandler)
+hamburgerClose.addEventListener('click', hamburgerCloseButtonClickHandler)
+overlayArea.addEventListener('click', overlayAreaClickHandler)
+window.addEventListener('keyup', hamburgerCloseEscHandler)
+
+
+
+

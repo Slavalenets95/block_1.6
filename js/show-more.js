@@ -1,13 +1,21 @@
-let showMoreBtn = document.querySelectorAll('.show-more')
-let readMore = document.querySelector('.read-more')
+const showMoreBtn = document.querySelectorAll('.show-more')
+const readMoreBtn = document.querySelector('.read-more')
+
+
+
+function showMoreButtonCLickHandler() {
+    this.previousElementSibling.classList.toggle('max-height-none')
+    this.innerHTML === 'Показать всё' ? this.innerHTML = 'Скрыть' : this.innerHTML = 'Показать всё'
+}
+
+function readMoreButtonClickHandler() {
+    this.previousElementSibling.classList.toggle('max-height-none')
+    this.innerHTML === 'Читать далее' ? this.innerHTML = 'Скрыть' : this.innerHTML = 'Читать далее'
+}
+
+
 showMoreBtn.forEach((item) => {
-    item.addEventListener('click', () => {
-        item.previousElementSibling.classList.toggle('max-height-none')
-        item.innerHTML == 'Показать всё' ? item.innerHTML = 'Скрыть' : item.innerHTML = 'Показать всё'
-    })
+    item.addEventListener('click', showMoreButtonCLickHandler)
 })
 
-readMore.addEventListener('click', (event) => {
-    event.target.previousElementSibling.classList.toggle('max-height-none')
-    event.target.innerHTML == 'Читать далее' ? event.target.innerHTML = 'Скрыть' : event.target.innerHTML = 'Читать далее'
-})
+readMoreBtn.addEventListener('click', readMoreButtonClickHandler)

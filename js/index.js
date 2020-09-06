@@ -3,5 +3,6 @@ import '../scss/style.scss';
 import './slider'
 import './hamburger'
 import './show-more'
-import './modal'
+import './feedback'
+import './callback'
 

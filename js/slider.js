@@ -2,12 +2,12 @@ import Swiper from 'swiper/bundle';
 const sliderBrand = document.querySelector('.slider-brand')
 const sliderTechnical = document.querySelector('.slider-technical')
 const sliderPrice = document.querySelector('.price-table')
-let mySwiper;
+let mySwiper = [];
 
 
 function mobileSliderBrand() {
 	if (window.innerWidth <= 767 && sliderBrand.dataset.mobile == 'false') {
-		mySwiper = new Swiper(sliderBrand, {
+		mySwiper[0] = new Swiper(sliderBrand, {
 			slidesPerView: 'auto',
 			spaceBetween: 0,
 			loop: false,
@@ -26,14 +26,14 @@ function mobileSliderBrand() {
 	if (window.innerWidth > 767) {
 		sliderBrand.dataset.mobile = 'false';
 		if (sliderBrand.classList.contains('swiper-container-initialized')) {
-			mySwiper.destroy();
+			mySwiper[0].destroy();
 		}
 	}
 }
 
 function mobileSliderTechnical() {
 	if (window.innerWidth <= 767 && sliderTechnical.dataset.mobile == 'false') {
-		mySwiper = new Swiper(sliderTechnical, {
+		mySwiper[1] = new Swiper(sliderTechnical, {
 			slidesPerView: 'auto',
 			spaceBetween: 0,
 			loop: false,
@@ -52,14 +52,14 @@ function mobileSliderTechnical() {
 	if (window.innerWidth > 767) {
 		sliderTechnical.dataset.mobile = 'false';
 		if (sliderTechnical.classList.contains('swiper-container-initialized')) {
-			mySwiper.destroy();
+			mySwiper[1].destroy();
 		}
 	}
 }
 
 function mobileSliderPrice() {
 	if (window.innerWidth <= 767 && sliderPrice.dataset.mobile == 'false') {
-		mySwiper = new Swiper(sliderPrice, {
+		mySwiper[2] = new Swiper(sliderPrice, {
 			slidesPerView: 'auto',
 			spaceBetween: 0,
 			loop: false,
@@ -76,7 +76,7 @@ function mobileSliderPrice() {
 	if (window.innerWidth > 767) {
 		sliderPrice.dataset.mobile = 'false';
 		if (sliderPrice.classList.contains('swiper-container-initialized')) {
-			mySwiper.destroy();
+			mySwiper[2].destroy();
 		}
 	}
 }

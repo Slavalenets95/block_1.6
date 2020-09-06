@@ -1,0 +1,41 @@
+.callback{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $white;
+    height: 100%;
+    z-index: 5;
+    max-width: 320px;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    display: none;
+    &__form{
+        padding: 40px 16px 0 16px;
+    }
+    &__close{
+        margin-left: 16px;
+        margin-top: 24px;
+    }
+    &__submit{
+        padding: 10px 42px 10px 16px;
+        align-self: flex-end;
+        margin-top: 20px;
+    }
+    &--active{
+        display: block;
+    }
+}
+
+@media only screen and (min-width : 768px){
+    .callback{
+        max-width: 440px;
+        &__form{
+            padding: 40px 32px 0 32px;
+        }
+        &__close{
+            margin: 0;
+            position: absolute;
+            top: 35px;
+            left: -64px;
+        }
+    }
+}
