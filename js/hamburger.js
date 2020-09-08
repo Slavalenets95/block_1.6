@@ -1,52 +1,59 @@
-const hamburger = document.querySelector('.hamburger')
-const hamburgerClose = document.querySelector('.ui-button--hamburger-close')
-const hamburgerOpen = document.querySelector('.ui-button--hamburger-open')
+const hamburgerMenu = document.querySelector('.hamburger')
+const hamburgerCloseButton = document.querySelector('.ui-button--hamburger-close')
+const hamburgerOpenButton = document.querySelector('.ui-button--hamburger-open')
 const overlayArea = document.querySelector('.overlay')
+const ESC_KEYCODE = 27
 
 
 
 function openHamburger() {
-    hamburger.classList.add('hamburger--active')
+    hamburgerMenu.classList.add('hamburger--active')
+    overlayArea.classList.add('overlay--active')
+    hamburgerMenu.focus()
+
+    hamburgerCloseButton.addEventListener('click', hamburgerCloseButtonClickHandler)
+    overlayArea.addEventListener('click', overlayAreaClickHandler)
+    hamburgerMenu.addEventListener('keyup', escapeKeyDownHandler)
+
+    hamburgerOpenButton.removeEventListener('click', hamburgerOpenButtonClickHandler)
+
 }
 
 function closeHamburger() {
-    hamburger.classList.remove('hamburger--active')
+    hamburgerMenu.classList.remove('hamburger--active')
+    overlayArea.classList.remove('overlay--active')
+
+    hamburgerOpenButton.addEventListener('click', hamburgerOpenButtonClickHandler)
+
+    hamburgerCloseButton.removeEventListener('click', hamburgerCloseButtonClickHandler)
+    overlayArea.removeEventListener('click', overlayAreaClickHandler)
+    hamburgerMenu.removeEventListener('keyup', escapeKeyDownHandler)
+
 }
 
-function overlay() {
-    overlayArea.classList.toggle('overlay--active')
-}
+
 
 function hamburgerOpenButtonClickHandler() {
     openHamburger()
-    overlay()
 }
 
 function hamburgerCloseButtonClickHandler() {
     closeHamburger()
-    overlay()
 }
 
 function overlayAreaClickHandler() {
-    if(hamburger.classList.contains('hamburger--active')) {
         closeHamburger()
-        overlay()
-    }
 }
 
-function hamburgerCloseEscHandler(event) {
-    if(event.keyCode === 27 && hamburger.classList.contains('hamburger--active')) {
+function escapeKeyDownHandler(event) {
+    if(event.keyCode === ESC_KEYCODE) {
         closeHamburger()
-        overlay()
     }
 }
 
 
-hamburgerOpen.addEventListener('click', hamburgerOpenButtonClickHandler)
-hamburgerClose.addEventListener('click', hamburgerCloseButtonClickHandler)
-overlayArea.addEventListener('click', overlayAreaClickHandler)
-window.addEventListener('keyup', hamburgerCloseEscHandler)
+hamburgerOpenButton.addEventListener('click', hamburgerOpenButtonClickHandler)
 
 
 
-
+ 

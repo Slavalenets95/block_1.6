@@ -1,21 +1,34 @@
-const showMoreBtn = document.querySelectorAll('.show-more')
-const readMoreBtn = document.querySelector('.read-more')
+const showMoreButton = document.querySelectorAll('.show-more')
 
 
+function showMore(event) {
+    event.target.previousElementSibling.classList.add('max-height-none')
+    event.target.innerHTML = 'Скрыть'
 
-function showMoreButtonCLickHandler() {
-    this.previousElementSibling.classList.toggle('max-height-none')
-    this.innerHTML === 'Показать всё' ? this.innerHTML = 'Скрыть' : this.innerHTML = 'Показать всё'
+    event.target.addEventListener('click', closeMoreButtonClickHandler)
+    event.target.removeEventListener('click', showMoreButtonCLickHandler)
 }
 
-function readMoreButtonClickHandler() {
-    this.previousElementSibling.classList.toggle('max-height-none')
-    this.innerHTML === 'Читать далее' ? this.innerHTML = 'Скрыть' : this.innerHTML = 'Читать далее'
+function closeMore(event) {
+    event.target.previousElementSibling.classList.remove('max-height-none')
+    event.target.innerHTML = 'Показать всё'
+
+    event.target.addEventListener('click', showMoreButtonCLickHandler)
+    event.target.removeEventListener('click', closeMoreButtonClickHandler)
 }
 
 
-showMoreBtn.forEach((item) => {
+function showMoreButtonCLickHandler(event) {
+    showMore(event)
+}
+
+function closeMoreButtonClickHandler(event) {
+    closeMore(event)
+}
+
+
+
+showMoreButton.forEach((item) => {
     item.addEventListener('click', showMoreButtonCLickHandler)
 })
 
-readMoreBtn.addEventListener('click', readMoreButtonClickHandler)

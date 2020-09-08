@@ -1,63 +1,57 @@
-const callBackButtonClose = document.querySelector('.callback__close')
-const callBackButtonOpen = document.querySelectorAll('.ui-button--phone')
+const callBackCloseButton = document.querySelector('.callback__close')
+const callBackOpenButton = document.querySelectorAll('.ui-button--phone')
 const callBackArea = document.querySelector('.callback')
 const overlayArea = document.querySelector('.overlay')
 const overlayHamburger = document.querySelector('.overlay-hamburger')
-const hamburger = document.querySelector('.hamburger')
-
+const hamburgerMenu = document.querySelector('.hamburger')
+const ESC_KEYCODE = 27
 
 
 function openCallBack() {
     callBackArea.classList.add('callback--active')
+    overlayHamburger.classList.add('overlay-hamburger--active')
     callBackArea.focus()
+    
+
+    callBackCloseButton.addEventListener('click', callbackCloseButtonClickHandler)
+    overlayHamburger.addEventListener('click', overlayCallbackClickHandler)
+    callBackArea.addEventListener('keyup', escKeyDownHandler)
+
+    callBackOpenButton.forEach((item) => {
+        item.removeEventListener('click', callbackOpenButtonClickHandler)
+    })
 }
 
 function closeCallBack() {
     callBackArea.classList.remove('callback--active')
+    overlayHamburger.classList.remove('overlay-hamburger--active')
+    hamburgerMenu.focus()
+
+    callBackOpenButton.forEach((item) => {
+        item.addEventListener('click', callbackOpenButtonClickHandler)
+    })
 }
 
-function overlay() {
-    if(hamburger.classList.contains('hamburger--active')) {
-        overlayHamburger.classList.toggle('overlay-hamburger--active')
-    } else {
-        overlayArea.classList.toggle('overlay--active')
-    }
-}
 
 function callbackOpenButtonClickHandler() {
     openCallBack()
-    overlay()
 }
 
 function callbackCloseButtonClickHandler() {
     closeCallBack()
-    overlay()
 }
 
-function overlayCallbackClickHandler() {
-    if(overlayHamburger.classList.contains('overlay-hamburger--active') && callBackArea.classList.contains('callback--active')) {
-        overlayHamburger.classList.toggle('overlay-hamburger--active')
-        closeCallBack()
-    } else if(overlayArea.classList.contains('overlay--active') && callBackArea.classList.contains('callback--active')) {
-        overlayArea.classList.toggle('overlay--active')
+function overlayCallbackClickHandler(event) {
+    closeCallBack()
+}
+
+function escKeyDownHandler(event) {
+    if(event.keyCode === ESC_KEYCODE) {
         closeCallBack()
     }
 }
 
-function callbackCloseEscHandler(event) {
-    if(event.keyCode === 27 && callBackArea.classList.contains('callback--active')) {
-        closeCallBack()
-        overlay()
-    }
-}
 
-
-
-
-callBackButtonOpen.forEach((item) => {
+callBackOpenButton.forEach((item) => {
     item.addEventListener('click', callbackOpenButtonClickHandler)
 })
-callBackButtonClose.addEventListener('click', callbackCloseButtonClickHandler)
-overlayHamburger.addEventListener('click', overlayCallbackClickHandler)
-overlayArea.addEventListener('click', overlayCallbackClickHandler)
-callBackArea.addEventListener('keyup', callbackCloseEscHandler)
