@@ -10,7 +10,7 @@ function showMore() {
 
 function closeMore() {
     readMoreButton.previousElementSibling.classList.remove('max-height-none')
-
+    readMoreButton.innerHTML = 'Читать далее'
     readMoreButton.addEventListener('click', showMoreButtonCLickHandler)
     readMoreButton.removeEventListener('click', closeMoreButtonCLickHandler)
 }
